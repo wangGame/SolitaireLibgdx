@@ -1,0 +1,71 @@
+ buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+        maven {
+            url "https://mvnrepository.com/artifact/com.google.ads.mediation/fyber"
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+            name 'central'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/jcenter'
+            name 'jcenter'
+        }
+//        maven {
+//            url 'https://maven.aliyun.com/repository/google'
+//            name 'Google'
+//        }
+
+        gradlePluginPortal()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        google()
+    }
+
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.14'
+        classpath 'com.android.tools.build:gradle:8.6.1'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+
+    }
+}
+
+allprojects {
+    apply plugin: "idea"
+
+    version = '1.0'
+    ext {
+        appName = "dominoes"
+        gdxVersion = '1.9.8'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+//        maven { url "http://192.168.1.108:8081/repository/maven-public/"
+//            allowInsecureProtocol = true} //for doodleads
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        //maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven {
+            url "https://mvnrepository.com/artifact/com.google.ads.mediation/fyber"
+        }
+        jcenter()
+        google()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+project(":desktop") {
+    apply plugin: "java"
+}
+
+project(":core") {
+    apply plugin: "java"
+}
