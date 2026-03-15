@@ -25,7 +25,7 @@ package com.badlogic.gdx;
  * screen is set.
  * </p>
  */
-public abstract class Game implements ApplicationListener {
+public abstract class BaseGame implements ApplicationListener {
 	protected Screen screen;
 
 	@Override

@@ -54,7 +54,7 @@ public class FreeCellScreen extends ScreenAdapter {
    private final FreeCellBoard board = new FreeCellBoard();
    private final FreeCellSolverService solverService = new FreeCellSolverService();
    private final UiButton[] buttons;
-   private final FreeCellGame game;
+   private final FreeCellBaseGame game;
 
    private Texture deckTexture;
    private TextureRegion[][] deckRegions;
@@ -70,7 +70,7 @@ public class FreeCellScreen extends ScreenAdapter {
    private String statusText = "Click a movable card, then click a target pile.";
    private Selection selection;
 
-   public FreeCellScreen(FreeCellGame game) {
+   public FreeCellScreen(FreeCellBaseGame game) {
       this.game = game;
       this.buttons = new UiButton[]{
          new UiButton("SPIDER", CONTROL_X, 822f, 288f, 44f),
@@ -793,7 +793,7 @@ public class FreeCellScreen extends ScreenAdapter {
 
       void drawLabel(SpriteBatch batch, BitmapFont font) {
          GlyphLayout layout = new GlyphLayout(font, this.label);
-         font.setColor(new Color(0.15f, 0.12f, 0.08f, 1f));
+         font.setColor(new Color(1, 1f, 1f, 1f));
          font.draw(batch, this.label, this.bounds.x + (this.bounds.width - layout.width) / 2f, this.bounds.y + (this.bounds.height + layout.height) / 2f);
       }
    }

@@ -4,7 +4,7 @@ package com.wk.postProcessor;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.kw.gdx.BaseGame;
+import com.kw.gdx.BaseBaseGame;
 import com.kw.gdx.constant.Constant;
 import com.kw.gdx.screen.BaseScreen;
 import com.wk.postProcessor.process.CrtPostProcessor;
@@ -13,7 +13,7 @@ public class PostProcessorScreen extends BaseScreen {
     private CrtPostProcessor crtPostProcessor;
     private ShaderProgram program;
     protected boolean userCrt;
-    public PostProcessorScreen(BaseGame game, ShaderProgram program) {
+    public PostProcessorScreen(BaseBaseGame game, ShaderProgram program) {
         super(game);
         this.program = program;
         this.userCrt = false;

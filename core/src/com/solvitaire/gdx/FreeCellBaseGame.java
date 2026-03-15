@@ -1,15 +1,13 @@
 package com.solvitaire.gdx;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
+import com.kw.gdx.BaseBaseGame;
 
-public class FreeCellGame extends Game {
+public class FreeCellBaseGame extends BaseBaseGame {
+
    @Override
-   public void create() {
-      this.showFreeCell();
-   }
-
-   public void showFreeCell() {
+   protected void loadingView() {
+      super.loadingView();
       this.switchScreen(new FreeCellScreen(this));
    }
 

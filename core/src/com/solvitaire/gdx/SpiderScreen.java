@@ -51,7 +51,7 @@ public class SpiderScreen extends ScreenAdapter {
    private final ExecutorService executor = Executors.newSingleThreadExecutor();
    private final SpiderBoard board = new SpiderBoard();
    private final SpiderSolverService solverService = new SpiderSolverService();
-   private final FreeCellGame game;
+   private final FreeCellBaseGame game;
    private final UiButton[] buttons;
 
    private Texture deckTexture;
@@ -68,7 +68,7 @@ public class SpiderScreen extends ScreenAdapter {
    private String statusText = "Select a face-up descending run, then choose a target tableau.";
    private Selection selection;
 
-   public SpiderScreen(FreeCellGame game) {
+   public SpiderScreen(FreeCellBaseGame game) {
       this.game = game;
       this.buttons = new UiButton[]{
          new UiButton("FREECELL", CONTROL_X, 840f, 302f, 42f),
@@ -490,7 +490,6 @@ public class SpiderScreen extends ScreenAdapter {
 
    private void handleButton(String label) {
       if ("FREECELL".equals(label)) {
-         this.game.showFreeCell();
          return;
       }
       if ("NEW".equals(label)) {
@@ -794,7 +793,7 @@ public class SpiderScreen extends ScreenAdapter {
 
       void drawLabel(SpriteBatch batch, BitmapFont font) {
          GlyphLayout layout = new GlyphLayout(font, this.label);
-         font.setColor(new Color(0.10f, 0.12f, 0.15f, 1f));
+         font.setColor(new Color(1f, 1f, 1f, 1f));
          font.draw(batch, this.label, this.bounds.x + (this.bounds.width - layout.width) / 2f, this.bounds.y + (this.bounds.height + layout.height) / 2f);
       }
    }

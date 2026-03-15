@@ -25,10 +25,10 @@ import com.badlogic.gdx.utils.Disposable;
  * <p>
  * Note that {@link #dispose()} is not called automatically.
  * </p>
- * @see Game */
+ * @see BaseGame */
 public interface Screen extends Disposable {
 
-	/** Called when this screen becomes the current screen for a {@link Game}. */
+	/** Called when this screen becomes the current screen for a {@link BaseGame}. */
 	public void show ();
 
 	/** Called when the screen should render itself.
@@ -44,7 +44,7 @@ public interface Screen extends Disposable {
 	/** @see ApplicationListener#resume() */
 	public void resume ();
 
-	/** Called when this screen is no longer the current screen for a {@link Game}. */
+	/** Called when this screen is no longer the current screen for a {@link BaseGame}. */
 	public void hide ();
 
 	/** Called when this screen should release all resources. */

@@ -5,11 +5,9 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Align;
-import com.kw.gdx.BaseGame;
-import com.kw.gdx.asset.Asset;
+import com.kw.gdx.BaseBaseGame;
 import com.kw.gdx.listener.OrdinaryButtonListener;
 import com.kw.gdx.resource.annotation.ScreenResource;
 import com.kw.gdx.screen.BaseScreen;
@@ -22,7 +20,7 @@ import com.tony.balatro.view.IconCardGroup;
 public class MainScreen extends BaseScreen {
     private BitmapFont migrationFont;
 
-    public MainScreen(BaseGame game) {
+    public MainScreen(BaseBaseGame game) {
         super(game);
     }
 

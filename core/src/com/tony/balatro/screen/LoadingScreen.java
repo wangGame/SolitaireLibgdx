@@ -2,10 +2,7 @@ package com.tony.balatro.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.utils.Align;
-import com.kw.gdx.BaseGame;
+import com.kw.gdx.BaseBaseGame;
 import com.kw.gdx.asset.Asset;
 import com.kw.gdx.utils.log.NLog;
 import com.tony.balatro.migration.LuaProjectMirror;
@@ -16,7 +13,7 @@ import com.tony.balatro.shader.ShaderUtils;
 import com.wk.postProcessor.PostProcessorScreen;
 
 public class LoadingScreen extends PostProcessorScreen {
-    public LoadingScreen(BaseGame game){
+    public LoadingScreen(BaseBaseGame game){
         super(game, ShaderUtils.getShaderProgram(ShaderType.post));
         userCrt = false;
     }

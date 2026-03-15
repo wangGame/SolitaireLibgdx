@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
-import com.kw.gdx.BaseGame;
+import com.kw.gdx.BaseBaseGame;
 import com.kw.gdx.constant.Constant;
 
 public class CrtPostProcessor {
@@ -19,7 +19,7 @@ public class CrtPostProcessor {
     private int height;
     private Stage postProcessStage;
     private Image postImage;
-    public CrtPostProcessor(BaseGame game, int width, int height,ShaderProgram shader) {
+    public CrtPostProcessor(BaseBaseGame game, int width, int height, ShaderProgram shader) {
         this.width = width;
         this.height = height;
         ShaderProgram.pedantic = false;

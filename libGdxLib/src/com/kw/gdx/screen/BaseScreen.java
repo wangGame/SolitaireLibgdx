@@ -15,7 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.kw.gdx.BaseGame;
+import com.kw.gdx.BaseBaseGame;
 import com.kw.gdx.constant.Configuration;
 import com.kw.gdx.constant.Constant;
 import com.kw.gdx.resource.annotation.AnnotationInfo;
@@ -23,7 +23,6 @@ import com.kw.gdx.resource.annotation.ScreenResource;
 import com.kw.gdx.resource.cocosload.CocosResource;
 import com.kw.gdx.utils.ads.BannerManager;
 import com.kw.gdx.utils.ads.BannerView;
-import com.kw.gdx.utils.log.NLog;
 import com.kw.gdx.view.dialog.DialogManager;
 import com.kw.gdx.view.dialog.base.BaseDialog;
 
@@ -45,7 +44,7 @@ public class BaseScreen implements Screen {
     protected float offsetY;
     @Deprecated
     protected float offsetX;
-    protected BaseGame game;
+    protected BaseBaseGame game;
     protected final DialogManager dialogManager;
     protected final BannerManager bannerManager;
     protected float centerX;
@@ -57,7 +56,7 @@ public class BaseScreen implements Screen {
 
     private float oldWidth;
     private float oldHeight;
-    public BaseScreen(BaseGame game){
+    public BaseScreen(BaseBaseGame game){
         activeScreen = true;
         this.game = game;
         this.screenSize = new Vector2(Constant.GAMEWIDTH,Constant.GAMEHIGHT);

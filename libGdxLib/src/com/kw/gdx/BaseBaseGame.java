@@ -1,6 +1,5 @@
 package com.kw.gdx;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -16,7 +15,6 @@ import com.badlogic.gdx.utils.viewport.ScalingViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.esotericsoftware.spine.utils.TwoColorPolygonBatch;
 import com.kw.gdx.anr.ANRError;
 import com.kw.gdx.anr.ANRListener;
 import com.kw.gdx.anr.ANRDEMO;
@@ -32,7 +30,7 @@ import com.kw.gdx.utils.log.NLog;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-public class BaseGame extends Game {
+public class BaseBaseGame extends com.badlogic.gdx.BaseGame {
     private Screen zhuanCScreen;
     private Batch batch;
     protected Viewport stageViewport;
@@ -222,11 +220,11 @@ public class BaseGame extends Game {
                 Gdx.app.postRunnable(new Runnable() {
                     @Override
                     public void run() {
-                        BaseGame.super.setScreen(screen);
+                        BaseBaseGame.super.setScreen(screen);
                     }
                 });
             } else {
-                BaseGame.super.setScreen(screen);
+                BaseBaseGame.super.setScreen(screen);
             }
         }else {
             zhuanCScreen = screen;
